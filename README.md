@@ -1,6 +1,6 @@
 # @tomisin.dev/react-table-of-content
 
-A simple and hassle-free table of content component for HTML and Markdown based contents, for ReactJS applications.
+A simple and hassle-free table of content component for HTML based contents, for ReactJS applications.
 
 [![NPM](https://img.shields.io/npm/v/@tomisin.dev/react-table-of-content.svg)](https://www.npmjs.com/package/@tomisin.dev/react-table-of-content) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
