@@ -1,9 +1,8 @@
 import * as React from 'react'
 import { useEffect, useState } from 'react'
-import generateTableOfContent from './generators/html'
 
-// import styles from './styles.module.css'
 import { ContentNodeType } from './types'
+import generateTableOfContent from './generators/html'
 
 interface Props {
   content: string
@@ -21,13 +20,7 @@ const createIdForTableOfContentHeading = (heading: string) => {
   return encodeURIComponent(heading.toLowerCase().replaceAll(' ', '-'))
 }
 
-const TableOfContentsTree = ({ node }: TableOfContentTreeProps) => {
-  console.log(
-    `At ${node.cleanText || 'root'} with children ${JSON.stringify(
-      node.children?.map((_) => _.cleanText)
-    )}`
-  )
-
+const TableOfContentTree = ({ node }: TableOfContentTreeProps) => {
   if (node === null || node === undefined) return <React.Fragment />
 
   return (
@@ -42,7 +35,7 @@ const TableOfContentsTree = ({ node }: TableOfContentTreeProps) => {
       {node.children && node.children.length > 0 && (
         <ul>
           {node.children.map((value: ContentNodeType) => (
-            <TableOfContentsTree key={value.cleanText} node={value} />
+            <TableOfContentTree key={value.cleanText} node={value} />
           ))}
         </ul>
       )}
@@ -50,25 +43,25 @@ const TableOfContentsTree = ({ node }: TableOfContentTreeProps) => {
   )
 }
 
-const TableOfContents = ({ content }: Props) => {
-  const [tableOfContentsRoot, setTableOfContentsRoot] = useState<
+const TableOfContent = ({ content }: Props) => {
+  const [tableOfContentRoot, setTableOfContentRoot] = useState<
     ContentNodeType | undefined
   >()
 
   useEffect(() => {
     const tableOfContentsRoot = generateTableOfContent(content)
-    setTableOfContentsRoot(tableOfContentsRoot)
+    setTableOfContentRoot(tableOfContentsRoot)
   }, [content])
 
   return (
     <div>
       <div>
-        {tableOfContentsRoot !== undefined && (
-          <TableOfContentsTree node={tableOfContentsRoot} />
+        {tableOfContentRoot !== undefined && (
+          <TableOfContentTree node={tableOfContentRoot} />
         )}
       </div>
     </div>
   )
 }
 
-export default TableOfContents
+export default TableOfContent

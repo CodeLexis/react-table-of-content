@@ -1,16 +1,17 @@
 {
-  "name": "@tomisin.dev/react-table-of-content-generator",
+  "name": "@tomisin.dev/react-table-of-content",
   "version": "1.0.0",
-  "description": "Table of content generator for HTML and Markdown contents",
+  "description": "Table of content component for HTML content",
   "author": "CodeLexis",
   "license": "MIT",
-  "repository": "CodeLexis/@tomisin.dev/react-table-of-content-generator",
+  "repository": "CodeLexis/@tomisin.dev/react-table-of-content",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
   "engines": {
     "node": ">=10"
   },
+  "keywords": ["table of content", "table of content generator", "react blog tools", "react"],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",

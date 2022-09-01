@@ -1,6 +1,6 @@
 {
-  "short_name": "@tomisin.dev/table-of-content-generator",
-  "name": "@tomisin.dev/table-of-content-generator",
+  "short_name": "@tomisin.dev/table-of-content",
+  "name": "@tomisin.dev/table-of-content",
   "icons": [
     {
       "src": "favicon.ico",
