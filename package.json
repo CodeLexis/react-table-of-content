@@ -4,7 +4,7 @@
   "description": "Table of content component for HTML content",
   "author": "CodeLexis",
   "license": "MIT",
-  "repository": "CodeLexis/@tomisin.dev/react-table-of-content",
+  "repository": "https://github.com/CodeLexis/react-table-of-content",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
