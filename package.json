@@ -1,6 +1,6 @@
 {
   "name": "@tomisin.dev/react-table-of-content",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Table of content component for HTML content",
   "author": "CodeLexis",
   "license": "MIT",
@@ -11,7 +11,12 @@
   "engines": {
     "node": ">=10"
   },
-  "keywords": ["table of content", "table of content generator", "react blog tools", "react"],
+  "keywords": [
+    "table of content",
+    "table of content generator",
+    "react blog tools",
+    "react"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
@@ -37,7 +42,6 @@
     "@types/react-dom": "^16.9.7",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
-    "microbundle-crl": "^0.13.10",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
@@ -51,6 +55,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.2.0",
+    "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
