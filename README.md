@@ -17,10 +17,29 @@ import React, { Component } from 'react'
 
 import TableOfContent from '@tomisin.dev/react-table-of-content'
 
+const htmlContent = `<html>
+  <article>
+    <h2>Heading One</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    <h2>Heading Two</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h2>Heading Three</h2>
+    <h3>Sub heading one</h3>
+    <p>Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h3>Sub heading two</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h4>Sub sub heading one</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h4>Sub sub heading two</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </article>
+</html>
+`
+
 class Example extends Component {
   render() {
     return <TableOfContent
-      content="<h2>Heading one</h2><h2>Heading two</h2><h3>Sub heading one</h3><h4>Sub sub heading one</h4><h4>Sub sub heading two</h4>"
+      content={htmlContent}
     />
   }
 }
@@ -28,16 +47,21 @@ class Example extends Component {
 
 ### Functional Component
 ```tsx
-import React from 'react'
-
-import TableOfContent from '@tomisin.dev/react-table-of-content'
+...
 
 const App = () => {
   return <TableOfContent
-    content="<h2>Heading one</h2><h2>Heading two</h2><h3>Sub heading one</h3><h4>Sub sub heading one</h4><h4>Sub sub heading two</h4>"
+    content={htmlContent}
   />
 }
 ```
+
+## Screenshots
+### Input
+![a sample HTML page showing an article that has several header tags](/blobs/screenshot_input.png "article that has several header tags")
+
+### Output
+![a sample HTML page depicting the header tags extracted from the article](/blobs/screenshot_output.png "generated table of contents")
 
 ## License
 
