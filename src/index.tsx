@@ -3,14 +3,7 @@ import { useEffect, useState } from 'react'
 
 import { ContentNodeType } from './types'
 import generateTableOfContent from './generators/html'
-
-interface Props {
-  content: string
-}
-
-interface TableOfContentTreeProps {
-  node: ContentNodeType
-}
+import { TableOfContentProps, TableOfContentTreeProps } from './interfaces'
 
 const createIdForTableOfContentHeading = (heading: string) => {
   if (!heading) {
@@ -43,7 +36,7 @@ const TableOfContentTree = ({ node }: TableOfContentTreeProps) => {
   )
 }
 
-const TableOfContent = ({ content }: Props) => {
+const TableOfContent = ({ content }: TableOfContentProps) => {
   const [tableOfContentRoot, setTableOfContentRoot] = useState<
     ContentNodeType | undefined
   >()
